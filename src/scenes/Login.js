@@ -8,6 +8,8 @@ import {
 } from 'firebase/auth'
 import { app } from '../ConnectAuth'
 
+import { Button } from 'react-bootstrap/'
+
 function Login({ user, setUser }) {
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
@@ -73,12 +75,11 @@ function Login({ user, setUser }) {
 				</label>
 				<input type='submit' value='Login' />
 			</form>
-			<button
+			<Button
 				onClick={handleGoogleLogin}
-				style={{ backgroundColor: 'black', color: 'white', border: 'none' }}
 			>
 				Login with Google
-			</button>
+			</Button>
 			<p>
 				Not a user? <Link to='/signup'>Sign Up!</Link>
 			</p>
